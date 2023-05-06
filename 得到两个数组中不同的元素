@@ -1,0 +1,22 @@
+  此方法主要应用到了set集合可以去重的特性, 然后它里面自带的一些方法, addAll() , retainAll(), removeAll() 等等
+  
+    public class ArrayTest2 {
+    public static void main(String[] args) {
+        Integer nums1[] = {100, 1, 2, 5, 7, -1};
+        Integer nums2[] = {1, -1, 2, 4, 12, 3, -12};
+        System.out.println("两个数组找出不同的元素");
+        compare2(nums1, nums2);
+    }
+    public static void compare2(Integer[] arr1, Integer[] arr2) {
+        Set<Integer> set1 = new HashSet<>(Arrays.asList(arr1));
+        Set<Integer> set2 = new HashSet<>(Arrays.asList(arr2));
+        Set<Integer> set3 = new HashSet<>(set2);
+ 
+        set3.addAll(set1);//set3 [100, 1, 2, 5, 7, -1]; set集合有去重特性
+        set1.retainAll(set2);//retainAll():保留包含在指定 collection 中的元素；s1：[-1,1,2]
+        set3.removeAll(set1);//	removeAll(); 移除 set 中那些包含在指定 collection 中的元素 ; s3 [3,4,100,5,7,-12,12]
+        System.out.println(set3);
+    }
+ 
+  }
+ 
