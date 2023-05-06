@@ -6,4 +6,6 @@ substring(int beginIndex, int endIndex) 方法是截取字符串的一部分，�
 
 equals(Object obj) 方法是比较字符串是否相等的方法，返回一个 boolean 类型的值，表示两个字符串是否相等。
 
-所以 "abc".equals(t.substring(t.length() - 3)) 这段代码的意思是，判断字符串 t 的最后三个字符是否等于字符串 "abc"，如果相等则返回 true，否则返回 false
+所以 "abc".equals(t.substring(t.length() - 3)) 这段代码的意思是，判断字符串 t 的最后三个字符是否等于字符串 "abc"，如果相等则返回 true，否则返回 false\
+
+
